@@ -1,6 +1,6 @@
 int BSize = 50;      //Size of individual boxes
-int BCount = 3;      //number of boxes on one edge (total number of boxes is BCount^3)
-int scaleFact = 5;   //How much variation the box sizes should have
+int BCount = 4;      //number of boxes on one edge (total number of boxes is BCount^3)
+int scaleFact = 10;  //How much variation the box sizes should have
 
 float scale;      //used for the scale of cubes
 
@@ -13,7 +13,7 @@ void setup(){
 void draw(){
   background(100);      //background color
   pointLight(255,200,0,(width/2), (height/2), BSize * BCount * 3);      //Color and position of light
- 
+
   translate((width/2), (height/2),BSize);      //Sets origin of cube cluster at the middle of screen
   
   rotateX(-(2 * PI * mouseY) / width);         //Rotation of x-axis dependent of mouse position, where screen width is one full rotation
